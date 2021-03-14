@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f2994a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f2c94c,
+    #f2994a
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f2c94c,
+    #f2994a
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  height: 50vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container .title {
+  font-size: 5rem;
+  color: rgba(255, 255, 255, 0.65);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.container .timer {
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.65);
+  letter-spacing: 15px;
+}
+
+.container .buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.container .buttons button {
+  height: 7vh;
+  width: 70vh;
+  border-style: none;
+  margin: 20px;
+  cursor: pointer;
+  font-size: 2rem;
+  background-color: rgba(255, 255, 255, 0.65);
+}
+
+.container .buttons button:hover {
+  color: rgba(255, 255, 255, 0.65);
+  background-color: transparent;
+  border: 1px solid white;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Links -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+
+    <title>Interactive pricing component</title>
+  </head>
+  <body>
+    <div class="background-container">
+      <div class="main-container">
+        <img
+          src="images/pattern-circles.svg"
+          alt="pattern-circles"
+          class="pattern-circles"
+        />
+        <div class="title">
+          <h1>Simple, traffic-based pricing</h1>
+          <p>Sign-up for our 30-day trial. No credit card required.</p>
+        </div>
+        <div class="price-container">
+          <div class="upper-price-container">
+            <div class="flexible-price">
+              <h2>100k pageviews</h2>
+              <span class="price">
+                <h3 id="output">$16.00</h3>
+                <p class="monthOrYear">/month</p>
+              </span>
+            </div>
+            <div class="slider">
+              <input type="range" min="1" max="100" id="slider" value="50" />
+            </div>
+            <div class="billing">
+              <p>Monthly Billing</p>
+              <label class="switch">
+                <input type="checkbox" id="checkbox" />
+                <span class="slider-button"></span>
+              </label>
+              <p>Yearly Billing</p>
+              <span class="discount">25% discount</span>
+            </div>
+          </div>
+          <div class="lower-price-container">
+            <ul class="checklist">
+              <li><img src="images/icon-check.svg" />Unlimited websites</li>
+              <li><img src="images/icon-check.svg" />100% data ownership</li>
+              <li><img src="images/icon-check.svg" />Email reports</li>
+            </ul>
+
+            <button class="trial">Start my trial</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

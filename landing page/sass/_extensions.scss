@@ -1,0 +1,57 @@
+.extensions {
+  @include titleSection;
+}
+
+.extension-grid {
+  display: grid;
+  width: fit-content;
+  height: 25em;
+  grid-template-columns: repeat(3, 16.5625em);
+  grid-template-rows: 25em;
+  grid-gap: 3.4375em;
+  margin: auto;
+
+  .card {
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    @include flex(column, space-evenly, center);
+
+    h2 {
+      font-weight: 500;
+      color: black;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+      color: gray;
+      font-size: 0.6785rem;
+    }
+
+    a {
+      @include button(14.5em, 3em, $softBlue);
+      color: white;
+      text-decoration: none;
+
+      &:hover {
+        border: 2px solid $softBlue;
+        color: $softBlue;
+        background-color: white;
+      }
+    }
+  }
+
+  .one {
+    margin-bottom: 3.125em;
+  }
+
+  .two {
+    margin-top: 1.5625em;
+    margin-bottom: 1.5625em;
+  }
+
+  .three {
+    margin-top: 3.125em;
+  }
+}

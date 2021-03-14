@@ -1,0 +1,61 @@
+@mixin mobileScreen() {
+  // 640px
+  @media screen and (min-width: 40em) {
+    @content;
+  }
+}
+
+@mixin tabletScreen() {
+  // 1024px
+  @media screen and (min-width: 64em) {
+    @content;
+  }
+}
+
+@mixin desktopScreen() {
+  
+}
+
+@mixin button($width, $height, $color) {
+  width: $width;
+  height: $height;
+  border-radius: 5px;
+  background-color: $color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex($dir, $jc, $ai) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+@mixin titleSection() {
+  width: 33.75em;
+  height: 6.875em;
+  margin: auto;
+  margin-top: 10em;
+  margin-bottom: 5em;
+  @include flex(column, space-between, center);
+
+  h2 {
+    color: $veryDarkBlue;
+    font-size: 1.4375rem;
+    font-weight: 500;
+  }
+  p {
+    font-size: 0.9375rem;
+    color: gray;
+    text-align: center;
+    line-height: 1.5rem;
+  }
+}
+
+@mixin responsive($screenSize) {
+  @media screen and (max-width: $screenSize) {
+    @content;
+  }
+}
