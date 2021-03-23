@@ -1,0 +1,98 @@
+.features {
+  padding-top: 6.6875rem;
+  padding-left: 1em;
+  padding-right: 1em;
+
+  @include laptopScreenSize {
+    @include flex(row, space-between, flex-start);
+    padding-left: 4.3125em;
+    padding-right: 4.3125em;
+    width: 110%;
+  }
+
+  @include desktopScreenSize {
+    padding-left: 10.3125em;
+    padding-right: 10.3125em;
+  }
+
+  &__description {
+    @include flex(column, space-around, center);
+
+    @include laptopScreenSize {
+      @include flex(column, space-around, flex-start);
+      padding-top: 1rem;
+    }
+
+    @include desktopScreenSize {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        width: 70%;
+      }
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, 14.6875em);
+  }
+
+  .cell {
+    @include flex(column, space-around, center);
+
+    span {
+      @include flex(row, space-between, center);
+      width: 100%;
+      @include tabletScreenSize {
+        width: 100%;
+      }
+
+      @include desktopScreenSize {
+        width: 65%;
+        margin-right: 160px;
+      }
+    }
+
+    p {
+      @include laptopScreenSize {
+        padding-left: 5.5rem;
+        width: 100%;
+      }
+    }
+
+    .button {
+      width: 4.375rem;
+      height: 2.5rem;
+      padding: 7px 0;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    h4 {
+      text-align: left;
+      width: 75%;
+      color: $darkBlue;
+
+      @include tabletScreenSize {
+        font-size: 1.5rem;
+        padding-bottom: 5px;
+      }
+    }
+
+    p {
+      font-size: 0.9rem;
+      text-align: left;
+      line-height: 1.5625rem;
+      color: $darkGrayishBlue;
+      @include tabletScreenSize {
+        font-size: 1rem;
+        width: 80%;
+      }
+    }
+  }
+}

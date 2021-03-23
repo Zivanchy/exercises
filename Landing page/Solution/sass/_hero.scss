@@ -1,0 +1,33 @@
+.hero {
+  @include flex(column-reverse, space-between, center);
+
+  padding: 1.84em 1em;
+
+  /* Laptop Screen */
+
+  @include laptopScreenSize {
+    @include flex(row, space-between, center);
+    padding: 1.84em 4.3125em;
+  }
+
+  @include desktopScreenSize {
+    padding: 1.84em 10.3125em;
+  }
+
+  &__description {
+    width: 90%;
+    @include flex(column, space-around, center);
+
+    @include laptopScreenSize {
+      @include flex(column, space-around, flex-start);
+    }
+
+    @include desktopScreenSize {
+      width: 60%;
+    }
+  }
+
+  &__image {
+    width: 90%;
+  }
+}

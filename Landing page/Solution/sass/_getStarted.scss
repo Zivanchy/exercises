@@ -1,0 +1,62 @@
+.get-started {
+  width: 100%;
+  height: 25.3125em;
+  background-color: $brightRed;
+  text-align: center;
+  @include flex(column, center, center);
+  position: relative;
+
+  @include laptopScreenSize {
+    @include flex(row, space-between, center);
+    padding-left: 4.3125rem;
+    padding-right: 4.3125rem;
+    height: 20em;
+  }
+  @include desktopScreenSize {
+    padding-left: 10.3125rem;
+    padding-right: 10.3125rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    color: $veryLightGray;
+    width: 90%;
+    z-index: 1;
+
+    @include laptopScreenSize {
+      width: 60%;
+    }
+  }
+
+  .button {
+    color: $brightRed;
+    background-color: $veryLightGray;
+    display: inline-block;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px;
+    font-weight: bold;
+  }
+
+  .circle {
+    height: 90%;
+    width: 90%;
+    background-color: rgb(243, 106, 72);
+    position: absolute;
+    border-radius: 50%;
+    transform: translateX(-70%);
+
+    @include tabletScreenSize {
+      width: 50%;
+      transform: translateX(-100%);
+    }
+
+    @include laptopScreenSize {
+      width: 30%;
+      transform: translateX(-85%);
+    }
+
+    @include desktopScreenSize {
+      width: 25%;
+      transform: translateX(-110%);
+    }
+  }
+}

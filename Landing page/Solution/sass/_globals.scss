@@ -1,0 +1,95 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.hide {
+  display: none !important;
+}
+
+.button {
+  display: inline-block;
+  width: 8.75em;
+  height: 2.8125em;
+  border-radius: 25px;
+  background-color: $brightRed;
+  color: $veryLightGray;
+  text-decoration: none;
+  text-align: center;
+  padding: 9px 0;
+  box-shadow: $brightRed 0px 3px 8px;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.open {
+  > span:first-child {
+    transform: rotate(45deg);
+  }
+
+  > span:nth-child(2) {
+    opacity: 0;
+  }
+
+  > span:last-child {
+    transform: rotate(-45deg);
+  }
+}
+
+.overflow-hidden {
+  overflow-y: hidden;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: $darkBlue;
+  text-align: center;
+  margin-bottom: 1em;
+  @include tabletScreenSize {
+    font-size: 2.5rem;
+  }
+
+  @include laptopScreenSize {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  @include desktopScreenSize {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 3.5rem;
+  }
+}
+
+.text {
+  font-size: 0.9rem;
+  color: $darkGrayishBlue;
+  text-align: center;
+  width: 90%;
+  margin-bottom: 2.25em;
+  line-height: 1.5rem;
+  @include tabletScreenSize {
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+  }
+
+  @include laptopScreenSize {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: left;
+  }
+}
